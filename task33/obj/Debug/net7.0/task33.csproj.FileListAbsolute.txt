@@ -1,0 +1,15 @@
+C:\Users\Alexandr\Desktop\c_sharp_\task33\bin\Debug\net7.0\task33.exe
+C:\Users\Alexandr\Desktop\c_sharp_\task33\bin\Debug\net7.0\task33.deps.json
+C:\Users\Alexandr\Desktop\c_sharp_\task33\bin\Debug\net7.0\task33.runtimeconfig.json
+C:\Users\Alexandr\Desktop\c_sharp_\task33\bin\Debug\net7.0\task33.dll
+C:\Users\Alexandr\Desktop\c_sharp_\task33\bin\Debug\net7.0\task33.pdb
+C:\Users\Alexandr\Desktop\c_sharp_\task33\obj\Debug\net7.0\task33.csproj.AssemblyReference.cache
+C:\Users\Alexandr\Desktop\c_sharp_\task33\obj\Debug\net7.0\task33.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alexandr\Desktop\c_sharp_\task33\obj\Debug\net7.0\task33.AssemblyInfoInputs.cache
+C:\Users\Alexandr\Desktop\c_sharp_\task33\obj\Debug\net7.0\task33.AssemblyInfo.cs
+C:\Users\Alexandr\Desktop\c_sharp_\task33\obj\Debug\net7.0\task33.csproj.CoreCompileInputs.cache
+C:\Users\Alexandr\Desktop\c_sharp_\task33\obj\Debug\net7.0\task33.dll
+C:\Users\Alexandr\Desktop\c_sharp_\task33\obj\Debug\net7.0\refint\task33.dll
+C:\Users\Alexandr\Desktop\c_sharp_\task33\obj\Debug\net7.0\task33.pdb
+C:\Users\Alexandr\Desktop\c_sharp_\task33\obj\Debug\net7.0\task33.genruntimeconfig.cache
+C:\Users\Alexandr\Desktop\c_sharp_\task33\obj\Debug\net7.0\ref\task33.dll
