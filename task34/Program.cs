@@ -2,16 +2,16 @@
 // Напишите программу, которая покажет количество чётных чисел в массиве. Пример: [345, 897, 568, 234] -> 2
 
 
-int[] array = CreateArray();
-ShowArray(array);
-Console.WriteLine($"\nКол-во четных чисел - {CalcEventNumbers(array)}");
+int[] RandomArray = CreateArray();
+ShowArray(RandomArray);
+Console.WriteLine($"\nКол-во четных чисел - {CalcEventNumbers(RandomArray)}");
 
-void ShowArray(int[] array)
+void ShowArray(int[] PrArray) // показ/печать массива
 {
     System.Console.Write("Элементы массива - ");
-    for(int i = 0; i < array.Length; i++)
+    for(int i = 0; i < PrArray.Length; i++)
     {
-        System.Console.Write(array[i] + " ");
+        System.Console.Write(PrArray[i] + " ");
     }
 }
 
