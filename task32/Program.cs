@@ -1,4 +1,4 @@
-﻿// int[] getRandArr(int length, int deviation)
+﻿ int[] getRandArr(int length, int deviation)
 {
     int[] arr = new int[length];
     Random rnd = new Random();
