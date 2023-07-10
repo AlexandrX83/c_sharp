@@ -10,6 +10,7 @@ double[] createRandDoubleArr(int size, int min, int max)
     return randArr;
 }
 
+System.Console.Write("Массив вещественных чисел--> ");
 void printArr(double[] arr)
 {
     Console.ForegroundColor = ConsoleColor.DarkGreen;
@@ -23,6 +24,7 @@ void printArr(double[] arr)
     }
     Console.ForegroundColor = ConsoleColor.White;
 }
+
 
 double findMaxMinDiff(double[] arr)
 {
@@ -38,7 +40,9 @@ double findMaxMinDiff(double[] arr)
     return max - min;
 }
 
+
 double[] array = createRandDoubleArr(10, 5, 15);
 printArr(array);
 double diff = findMaxMinDiff(array);
+System.Console.Write("Разница между максимальным и минимальным вещественным числом массива--> ");
 Console.WriteLine(Math.Round(diff, 2));
