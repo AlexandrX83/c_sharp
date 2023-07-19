@@ -1,4 +1,6 @@
-﻿/*Задача 50. Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, 
+﻿/*
+Задача 50. Напишите программу, которая на вход принимает позиции элемента
+ в двумерном массиве, 
 и возвращает значение этого элемента или же указание, что такого элемента нет.
 
 Например, задан массив:
@@ -7,68 +9,48 @@
 8 4 2 4
 17 -> такого числа в массиве нет
 */
-int[,] matrix = GetRandom2DArray(3,4,10);
-print2DArray(matrix);
 
-int[,] GetRandom2DArray(int rowNumber, int colNumber, int deviation)
+int rows = ReadInt("Введите индекс строки: ");
+int colums = ReadInt("Введите индекс столбца: ");
+int[,] numbers = new int[6, 8]; // объявление двумерного массива с явным указанием числа строк и столбцов
+FillArray2D(numbers); // Заполнение массива 
+PrintArray2D(numbers); // Вывод массива
+
+if (rows < numbers.GetLength(0) && colums < numbers.GetLength(1)) 
+   Console.WriteLine($"В ячейке таблицы с индексом {rows}{colums} находится число {numbers[rows, colums]}");
+  
+ //если индекс строки введённый пользователем меньше колличества строк массива И 
+//индекс столбца введённый пользователем меньше колличества столбцов массива  
+
+else Console.WriteLine($"{rows}{colums} -> числа с таким индексом в массиве нет");
+
+void FillArray2D(int[,] array)
 {
-    int[,] result = new int[rowNumber, colNumber];
-    for (int i = 0; i < rowNumber; i++)
+    for (int i = 0; i < array.GetLength(0); i++) //array.GetLength(0) функция получения количества строк
+    // двумерного массива. На это указывает параметр (0)
     {
-        for (int j = 0; j < colNumber; j++)
+        for (int j = 0; j < array.GetLength(1); j++)  //array.GetLength(1) - (1) количество столбцов
         {
-            result[i, j] = new Random().Next(-deviation, deviation + 1);
+            array[i, j] = new Random().Next(1, 10);
         }
     }
-    return result;
 }
 
-void print2DArray(int[,] arrayToPrint)
+void PrintArray2D(int[,] array)
 {
-    Console.Write($"[ ]\t");
-    for (int i = 0; i < arrayToPrint.GetLength(1); i++)
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-        Console.Write($"[{i}]\t");
-    }
-    Console.WriteLine();
-    for (int i = 0; i < arrayToPrint.GetLength(0); i++)
-    {
-        Console.Write($"[{i}]\t");
-        for (int j = 0; j < arrayToPrint.GetLength(1); j++)
+        for (int j = 0; j < array.GetLength(1); j++)
         {
-            Console.Write(arrayToPrint[i, j] + "\t");
+            Console.Write(array[i, j] + " ");
         }
         Console.WriteLine();
     }
-
+    Console.WriteLine();
 }
 
-Console.WriteLine("Enter number of row");
-int m = Convert.ToInt32(Console.ReadLine());
-
-Console.WriteLine("Enter number of column");
-int n = Convert.ToInt32(Console.ReadLine());
-
-bool IsValidPosition(int[,] matrix, int rowIndex, int columnIndex)
+int ReadInt(string message)
 {
-    if (rowIndex >= matrix.GetLength(0)
-     columnIndex >= matrix.GetLength(1)
-     rowIndex < 0
-    || columnIndex < 0) 
-    {
-        return false;
-    }
-    return true;
+    Console.Write(message);
+    return Convert.ToInt32(Console.ReadLine());
 }
-
-if (IsValidPosition(matrix, m, n))
-{
-    Console.WriteLine($"Your value is {matrix[m,n]} ");
-}
-
-else {
-Console.ForegroundColor = ConsoleColor.Red;
-Console.WriteLine("No such position in the array! ");
-
-}
-Console.ResetColor();

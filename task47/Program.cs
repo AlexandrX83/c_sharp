@@ -1,46 +1,49 @@
-﻿/* Задача 47. Задайте двумерный массив размером m×n, 
-заполненный случайными вещественными числами.
-
-m = 3, n = 4.
-0,5 7 -2 -0,2
-1 -3,3 8 -9,9
-8 7,8 -7,1 9 
+﻿/*
+Задача 47. 
+Задайте двумерный массив размером m×n, заполненный случайными вещественными числами.
 */
 
-double[,] GetRandom2DArray(int rowNumber, int colNumber, int deviation)
+int rows = ReadInt("Введите количество строк: "); // для получения от пользователя количества столбцов и строк
+int colums = ReadInt("Введите количество столбцов: "); // используется метод ReadInt объявленный ниже
+double[,] numbers = new double[rows, colums]; //объявление массива вещественных чисел и заполнение его нулями 
+
+// Заполнение массива рандомными вещественными числами
+void FillArray2D(double[,] array)
+// для заполнения массива случайными вещественными числами используются два 
+// вложенных цикла
 {
-    double[,] result = new double[rowNumber, colNumber];
-    for (int i = 0; i < rowNumber; i++)
+    for (int i = 0; i < array.GetLength(0); i++) // цикл верхнего уровня осуществляет переход от строки к строке 
     {
-        for (int j = 0; j < colNumber; j++)
+        for (int j = 0; j < array.GetLength(1); j++) // вложенный цикл непосредственно заполняет массив данными,
+        //каждый элемент строки,по сути являющийся элементом столбца двумерного массива
         {
-            result[i, j] = new Random().NextDouble()(2 * deviation) - deviation;
-            //  result[i, j] = new Random().NextDouble()*(maxValue - minValue) + minValue;
-            result[i, j] = Math.Round(result[i, j], 1);
+            array[i, j] = new Random().Next(-99, 99) / 10.0;
         }
     }
-    return result;
 }
 
-void Print2DArray(double[,] arrayToPrint)
+//  Функция вывода массива в терминал
+void PrintArray2D(double[,] array)
 {
-    Console.Write($"[ ]\t");
-    for (int i = 0; i < arrayToPrint.GetLength(1); i++)
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-        Console.Write($"[{i}]\t");
-    }
-    Console.WriteLine();
-    for (int i = 0; i < arrayToPrint.GetLength(0); i++)
-    {
-        Console.Write($"[{i}]\t");
-        for (int j = 0; j < arrayToPrint.GetLength(1); j++)
+        for (int j = 0; j < array.GetLength(1); j++)
         {
-            Console.Write(arrayToPrint[i, j] + "\t");
+            Console.Write(array[i, j] + " ");
         }
         Console.WriteLine();
     }
-
+    Console.WriteLine();
 }
 
-double[,] numbers = GetRandom2DArray(3, 4, 100);
-Print2DArray(numbers);
+// метод для получения от пользователя количество строк и столбцов 
+int ReadInt(string message) // в данном случае параметром метода является текст  
+                            //и используется только для пояснения пользователю что программа ожидает от него ввода  
+{
+    Console.Write(message);
+    return Convert.ToInt32(Console.ReadLine()); // возращаемое методом значение получается от пользователя
+    // с помощью стандартного метода ввода, с последующей конвертацией .   
+}
+
+FillArray2D(numbers);
+PrintArray2D(numbers);

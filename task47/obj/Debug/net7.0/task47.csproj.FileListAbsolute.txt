@@ -3,3 +3,13 @@ C:\Users\Alexandr\Desktop\c_sharp_\task47\obj\Debug\net7.0\task47.GeneratedMSBui
 C:\Users\Alexandr\Desktop\c_sharp_\task47\obj\Debug\net7.0\task47.AssemblyInfoInputs.cache
 C:\Users\Alexandr\Desktop\c_sharp_\task47\obj\Debug\net7.0\task47.AssemblyInfo.cs
 C:\Users\Alexandr\Desktop\c_sharp_\task47\obj\Debug\net7.0\task47.csproj.CoreCompileInputs.cache
+C:\Users\Alexandr\Desktop\c_sharp_\task47\bin\Debug\net7.0\task47.exe
+C:\Users\Alexandr\Desktop\c_sharp_\task47\bin\Debug\net7.0\task47.deps.json
+C:\Users\Alexandr\Desktop\c_sharp_\task47\bin\Debug\net7.0\task47.runtimeconfig.json
+C:\Users\Alexandr\Desktop\c_sharp_\task47\bin\Debug\net7.0\task47.dll
+C:\Users\Alexandr\Desktop\c_sharp_\task47\bin\Debug\net7.0\task47.pdb
+C:\Users\Alexandr\Desktop\c_sharp_\task47\obj\Debug\net7.0\task47.dll
+C:\Users\Alexandr\Desktop\c_sharp_\task47\obj\Debug\net7.0\refint\task47.dll
+C:\Users\Alexandr\Desktop\c_sharp_\task47\obj\Debug\net7.0\task47.pdb
+C:\Users\Alexandr\Desktop\c_sharp_\task47\obj\Debug\net7.0\task47.genruntimeconfig.cache
+C:\Users\Alexandr\Desktop\c_sharp_\task47\obj\Debug\net7.0\ref\task47.dll
